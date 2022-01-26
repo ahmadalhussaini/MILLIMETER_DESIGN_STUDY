@@ -1,0 +1,61 @@
+﻿
+@model MILLIMETER_DESIGN.Models.Admin;
+@{ Layout = null; }
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Millimter_Login</title>
+    <link rel="icon" href="~/imges/73669ef0-cd2c-4175-90b6-cbfcc53a9e2d.jpg">
+    <link href="~/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link href="~/css/icheck-bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/admin.min.css" rel="stylesheet" />
+    <link href="~/css/dataTables.bootstrap4.css" rel="stylesheet" />
+    <link href="~/css/responsive.bootstrap4.min.css" rel="stylesheet" />
+    <link href="~/css/admin.css" rel="stylesheet" />
+
+</head>
+<body class="hold-transition login-page">
+    <div>
+        <h2 class="title">Millimeter Design Studio</h2>
+        <br />
+        <img class="logo" src="~/imges/ملم.png" />
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-2"></div>
+            <div class="col-lg-6 col-md-8">
+                <div class="col-lg-12">
+                    <div class="col-lg-12">
+                        <form asp-controller="Admin" asp-action="Login">
+                            <div class="form-group">
+                                <label asp-for="Email">EMAIL</label>
+                                <input asp-for="Email" type="text" class="form-control" />
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Password">PASSWORD</label>
+                                <input asp-for="Password" type="password" class="form-control" id="password" name="password" />
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" class="btn btn-outline-primary form-control" value="Log IN" />
+                            </div>
+                            @{ if (@TempData["Error"] != null && @TempData["Error"] != "")
+                                {
+                    <div class="alert alert-danger">
+                       
+                        @TempData["Error"]
+                    </div> } }
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

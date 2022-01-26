@@ -1,0 +1,81 @@
+﻿@model MILLIMETER_DESIGN.ViweModel.Team.TeamListViewModel;
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Teams";
+}
+<link href="~/css/Team.css" rel="stylesheet" />
+<head>
+
+</head>
+<body>
+    <div class="header">
+        <h2>TEAM IN MILLIMETER</h2>
+        <hr />
+    </div>
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team section-bg">
+        <div class="container">
+
+            <div class="section-title">
+
+                <p class="text-center pt-4 pb-2">
+                    Millimeter team of administrators
+                    and designers, each person with his
+                    job position and the nature of his
+                    currency. A complete team is able to
+                    work on all forms of projects with high professionalism.
+                </p>
+            </div>
+            <h3 style="text-align:center">Team Jordan</h3>
+
+            <div class="row">
+                @foreach (var elem in Model.TeamViewModel)
+                {
+                    if (elem.Country == "Jordan")
+                    {
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+                <img src="~/@elem.PathImg" />
+                <h4>@elem.Name</h4>
+
+                <span>@elem.Position</span>
+                <p>
+                    @elem.Description
+                </p>
+
+            </div>
+        </div>}
+                    }
+
+            </div>
+            <h3 style="text-align:center">
+                Team United Arab Emirates
+            </h3>
+
+            <div class="row">
+                @foreach (var elem in Model.TeamViewModel)
+                {
+                    if (elem.Country == "Dubai")
+                    {
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+                <img src="~/@elem.PathImg" />
+                <h4>@elem.Name</h4>
+
+                <span>@elem.Position</span>
+                <p>
+                    @elem.Description
+                </p>
+
+            </div>
+        </div>}
+                    }
+
+            </div>
+
+        </div>
+    </section><!-- End Team Section -->
+
+
+</body>

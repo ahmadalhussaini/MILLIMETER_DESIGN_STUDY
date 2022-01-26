@@ -1,0 +1,41 @@
+﻿@model MILLIMETER_DESIGN.ViweModel.Home.HomeListViewModel;
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Home";
+}
+<link href="~/css/Projects.css" rel="stylesheet" />
+<head>
+
+</head>
+<body>
+    <div class="header">
+        @foreach (var elem in Model.Projects)
+        {
+        <h2> @elem.Type</h2>
+        <hr />
+            break;
+        }
+    </div>
+
+    <div class="Projects row d-flex justify-content-around align-items-center">
+        @foreach (var elem in Model.Projects)
+        {
+        <div class="single-products-catagory col-md-6 col-lg-4 col-12" style="height:300px;">
+
+            <a asp-controller="Home" asp-action="Project" asp-route-id="@elem.Id">
+
+                <img src="~/@elem.FirstImage" />
+
+                <div class="hover-content">
+                    <h4 style="color:antiquewhite">@elem.Name_En</h4>
+                    <div class="line"></div>
+                </div>
+
+            </a>
+        </div>
+
+
+        }
+    </div>
+</body>

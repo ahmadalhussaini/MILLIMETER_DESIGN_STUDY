@@ -1,0 +1,63 @@
+﻿@model MILLIMETER_DESIGN.ViweModel.Image.ImageViewModel
+
+@{
+    Layout = "_LayoutAdmin";
+    ViewData["Title"] = "Create";
+}
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-left">
+                    <li class="breadcrumb-item"><a asp-controller="Image" asp-action="Index">Images</a></li>
+                    <li class="breadcrumb-item"><a asp-controller="Image" asp-action="Create">Add Image</a></li>
+                    <li class="breadcrumb-item active">@ViewData["navigation"]</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+<hr />
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header p-2">
+                        <h2 class="card-title"><b>Add Project</b></h2>
+                    </div>
+                    <div class="card-body ">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <form asp-action="Create" enctype="multipart/form-data">
+                                    <div class="row d-flex justify-content-around align-items-center">
+
+                                        <div class="form-group col-lg-6">
+                                            <label asp-for="ProjectId" class="control-label">ProjectId</label>
+                                            <input asp-for="ProjectId" required class="form-control" />
+                                            <span asp-validation-for="ProjectId" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group col-lg-6">
+                                            <label asp-for="PathImg" class="control-label">PathImg</label>
+                                            <input type="file" required asp-for="PathImg" class="form-control" />
+                                            <span asp-validation-for="PathImg" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group col-lg-6">
+                                            <label asp-for="CreatedAt" class="control-label">CreatedAt</label>
+                                            <input type="date" required asp-for="CreatedAt" class="form-control" />
+                                            <span asp-validation-for="CreatedAt" class="text-danger"></span>
+                                        </div>
+                                        </div>
+                                        <div class="form-group text-center">
+                                            <input type="submit" value="Create" class="btn btn-success" />
+                                        </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

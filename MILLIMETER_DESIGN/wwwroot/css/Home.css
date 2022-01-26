@@ -1,0 +1,268 @@
+﻿body{
+    background-color:white;
+}
+.carousel-inner {
+    height: 800px;
+}
+
+.carousel-item img {
+    object-fit:cover;
+    width: 100%;
+    height: 800px
+}
+
+.carousel-control {
+    height: 40px;
+    width: 40px;
+    background-color: black;
+    opacity: 0.5;
+    color: wheat;
+    border-radius: 100%;
+    margin: auto 40px;
+}
+
+.Experience {
+    width: 90%;
+    margin: 60px auto;
+}
+.inside {
+    height: 100%;
+    background-color: rgba(11, 12, 12, 0.6);
+    
+    width: 100%;
+    border-radius: 10px;
+}
+    .Experience h1 {
+        font-size:30px;
+        text-align: center;
+        margin-top: -20px;
+       font-family:Arial;
+       letter-spacing:9px;
+       word-spacing:2px;
+      text-transform:uppercase;
+    }
+
+.Experience-type {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around
+}
+
+    .Experience-type .Experiences {
+        width: 30%;
+        height: 200px;
+        border-radius: 10px;
+ 
+    }
+        .Experience-type .Experiences:nth-child(1) {
+            background-image: url("../imges/backgraund.jpg");
+            background-size: 100% 100%;
+        }
+        .Experience-type .Experiences:nth-child(2) {
+            background-image: url("../imges/119042713_1035692116886288_4737199176484653431_n.jpg");
+            background-size: 100% 100%;
+        }
+        .Experience-type .Experiences:nth-child(3) {
+            background-image: url("../imges/2 (1).jpg");
+            background-size: 100% 100%;
+           
+        }
+
+        .Experience-type .Experiences h3 {
+           padding-top:20px;
+            text-align: center;
+            font-size: 23px;
+            font-weight: 500;
+            color:white;
+        }
+        .Experience-type .Experiences p {
+            width: 85%;
+            margin: auto;
+            text-align: center;
+            color: white;
+            font-weight: 600;
+            font-size:16px;
+        }
+
+hr{
+width:70%;
+margin:7px auto;
+height:1px;
+background-color:black;
+}
+    .clients h1 {
+        font-size: 30px;
+        text-align: center;
+        margin-top: 40px;
+        font-family: Arial;
+        letter-spacing: 9px;
+        word-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    .clients .carousel-item {
+    }
+
+        .clients .carousel-item img {
+            height: 200px;
+            width: 200px;
+        }
+
+.question {
+    background-image: url(../imges/163784587_1176092969512868_2024183175193379834_n.jpg);
+    width: 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+    .question .question-insid h1 {
+         font-size:30px;
+        text-align: center;
+        margin-top: -20px;
+       font-family:Arial;
+       letter-spacing:9px;
+       word-spacing:2px;
+      text-transform:uppercase;
+    }
+
+    .question .question-insid h5 {
+        text-align: center;
+        margin-top: 5px;
+        color: white
+    }
+
+.question-insid {
+    padding-bottom: 50px;
+    padding-top: 50px;
+    background-color: rgba(11, 12, 12, 0.7);
+    width: 100%;
+}
+
+.type-question {
+    width: 90%;
+    margin: 10px auto;
+}
+
+    .type-question .quest {
+        width: 47%;
+        color: white
+    }
+
+        .type-question .quest h3 {
+            text-align: left;
+            color: white;
+            margin-top: 30px;
+        }
+
+        .type-question .quest h6 {
+            color: white;
+            font-family: 'Franklin Gothic'
+        }
+
+
+
+.carousel-control2 {
+    height: 30px;
+    width: 30px;
+    background-color: black;
+    opacity: 0.5;
+    color: wheat;
+    border-radius: 100%;
+    margin: 70px 20px;
+}
+.carousel-inner2{
+    height:300px;
+}
+.carousel-item2 img {
+    object-fit:fill;
+    width: 100%;
+ 
+}
+.clients-img {
+    width: 85%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.clients-img .box-img{
+    margin:12px;
+    height:180px;
+    width:180px;
+    }
+    .clients-img .box-img img{
+        height:180px;
+        width:180px;
+        margin:10px;
+    }
+
+
+    @media (max-width: 700px) {
+        .carousel-inner {
+        height: 300px;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: 300px
+    }
+
+    .carousel-control {
+        height: 30px;
+        width: 30px;
+        background-color: black;
+        opacity: 0.5;
+        color: wheat;
+        border-radius: 100%;
+        margin: auto 20px;
+    }
+        .clients-img {
+            width: 80%;
+            margin: 20px auto;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+    .Experience-type {
+        margin-top: 30px;
+        display: block;
+        justify-content: space-around
+    }
+
+        .Experience-type .Experiences {
+            width: 80%;
+            margin: 15px auto;
+            border-radius:10px;
+            background-color: rgba(51, 61, 83,0.9)
+        }
+
+    .type-question {
+        display: block;
+        width: 90%;
+        margin: 10px auto;
+    }
+
+        .type-question .imagess {
+            width: 100%;
+        }
+
+        .type-question .quest {
+            width: 100%;
+            color: white
+        }
+
+        .type-question .imagess img {
+            margin: 10px auto;
+            height: 300px;
+            width: 400px;
+            display: block;
+        }
+
+        .type-question .imagess img {
+            display: none;
+        }
+
+    .Experience h1 {
+        font-size: 29px;
+    }
+}

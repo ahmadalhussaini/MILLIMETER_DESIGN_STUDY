@@ -1,0 +1,83 @@
+﻿@model MILLIMETER_DESIGN.ViweModel.Project.ProjectViewModel
+
+@{
+    Layout = "_LayoutAdmin";
+    ViewData["Title"] = "Details";
+}
+<div style="margin-left:30px">
+<h1 >Details-Project</h1>
+
+<div>
+  
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class="col-sm-2">
+            Name-En
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name_En)
+        </dd>
+        <dt class="col-sm-2">
+            Name-Ar
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name_Ar)
+        </dd>
+        <dt class="col-sm-2">
+            Description-En
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Description_En)
+        </dd>
+        <dt class="col-sm-2">
+            Description-Ar
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Description_Ar)
+        </dd>
+        <dt class="col-sm-2">
+            Place_En
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Place_En)
+        </dd>
+        <dt class="col-sm-2">
+            Place_Ar
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Place_Ar)
+        </dd>
+        <dt class="col-sm-2">
+            Type
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+        <dt class="col-sm-2">
+            CreatedAt
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CreatedAt)
+        </dd>
+        <dt class="col-sm-2">
+            Images
+        </dt>
+        <dd class="col-sm-10">
+            @foreach (var elem in Model.images)
+            {
+            <img src="~/@elem.PathImg" width="60px" height="60px" />
+            }
+        </dd>
+
+    </dl>
+</div>
+<div>
+    <a class="btn btn-primary" style="margin-bottom:20px"  asp-action="Index">Back to List</a>
+</div>
+</div>

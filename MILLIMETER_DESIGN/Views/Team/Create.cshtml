@@ -1,0 +1,84 @@
+﻿@model MILLIMETER_DESIGN.ViweModel.Team.TeamViewModel
+
+@{
+    Layout = "_LayoutAdmin";
+    ViewData["Title"] = "Create";
+}
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-left">
+                    <li class="breadcrumb-item"><a asp-controller="Team" asp-action="Index">Team</a></li>
+                    <li class="breadcrumb-item"><a asp-controller="Team" asp-action="Create">Add Employee</a></li>
+                    <li class="breadcrumb-item active">@ViewData["navigation"]</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+<hr />
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header p-2">
+                        <h2 class="card-title"><b>Add Employee</b></h2>
+                    </div>
+                    <div class="card-body =">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <form asp-action="Create" enctype="multipart/form-data">
+                                    <div class="row d-flex justify-content-around align-items-center">
+                                        <div class="form-group col-lg-6">
+                                            <label asp-for="Name" class="control-label">Name</label>
+                                            <input asp-for="Name" required class="form-control" />
+                                            <span asp-validation-for="Name" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group col-lg-6">
+                                            <label asp-for="Position" class="control-label">Position</label>
+                                            <input asp-for="Position" required class="form-control" />
+                                            <span asp-validation-for="Position" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group col-lg-6">
+                                            <label asp-for="Description" class="control-label">Description</label>
+                                            <textarea asp-for="Description" required class="form-control" style="height:150px"></textarea>
+                                            <span asp-validation-for="Description" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group col-lg-6">
+                                            <label asp-for="Country" class="control-label">Country</label>
+                                            <select asp-for="Country" class="form-control">
+                                                <option>Jordan</option>
+                                                <option>Dubai</option>
+                                            </select>
+                                            <span asp-validation-for="Country" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group col-lg-6">
+                                            <label asp-for="Image" class="control-label">PathImg</label>
+                                            <input type="file" asp-for="Image" required class="form-control" />
+                                            <span asp-validation-for="Image" class="text-danger"></span>
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group text-center ">
+                                        <input type="submit" value="Create" class="btn btn-success" />
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+

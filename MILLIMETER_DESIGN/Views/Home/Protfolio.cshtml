@@ -1,0 +1,60 @@
+﻿@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Portfolio";
+}
+<link href="~/css/Portfolio.css" rel="stylesheet" />
+
+<head>
+
+</head>
+<body>
+    <div class="header">
+        <h2>PORTFOLIO</h2>
+        <hr />
+    </div>
+    <div class="type-portfolio">
+        <a class="desc1" asp-controller="Home" asp-action="Projects" asp-route-type="Commercial">
+
+            
+                <div class="inside">
+                    <h3>Commercial</h3>
+                    <p>
+                        Padding is used to create space around an element's content,
+                        inside of any defined borders.Padding is used to create space around
+
+
+                    </p>
+                </div>
+           
+        </a>
+        <a class="desc2" asp-controller="Home" asp-action="Projects" asp-route-type="Residential">
+
+            
+                <div class="inside">
+                    <h3>Residential</h3>
+                    <p>
+                        Padding is used to create space around an element's content,
+                        inside of any defined borders.Padding is used to create space around
+
+
+                    </p>
+                </div>
+           
+        </a>
+        <a  class="desc3"  asp-controller="Home" asp-action="Projects" asp-route-type="Landscape">
+
+        
+            <div class="inside">
+                <h3>Landscape</h3>
+                <p>
+                    Padding is used to create space around an element's content,
+                    inside of any defined borders.Padding is used to create space around
+
+                </p>
+            </div>
+       
+</a>
+    </div>
+
+
+</body>

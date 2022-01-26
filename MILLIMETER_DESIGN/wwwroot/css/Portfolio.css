@@ -1,0 +1,104 @@
+﻿.header h2 {
+    text-align: center;
+    margin-top: 35px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight:600
+}
+
+.header hr {
+    width: 120px;
+    border: 1px solid #83b582;
+    margin: 1px auto;
+    display: block;
+}
+.type-portfolio {
+    width:85%;
+    margin:20px auto;
+    display:flex;
+    justify-content:space-around
+}
+.inside {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    height:100%;
+    background-color: rgba(11, 12, 12, 0.5);
+    width: 100%;
+    transition:all 1s linear;
+}
+.desc1 {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    background-image: url(../imges/197584562_1225139557941542_1593627088779472136_n.jpg);
+    width: 30%;
+    transition: all 0.5s linear;
+    height: 300px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.desc2 {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    background-image: url(../imges/83853504_867581543697347_7657410081511702528_n.jpg);
+    width: 30%;
+    height: 300px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    transition: all 0.5s linear;
+}
+.desc3 {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    background-image: url('../imges/198030902_1225141191274712_9149967179736299051_n.jpg');
+    width: 30%;
+    display: block;
+    height: 300px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    transition: all 0.5s linear;
+}
+   
+ .type-portfolio   h3 {
+        margin: 20px auto;
+        color: white;
+        text-align: center
+    }
+.type-portfolio p {
+    text-shadow:-1px -1px 1px black;
+    color:white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width:80%;
+    text-align:center;
+    margin: 40px auto;    
+    }
+.desc1:hover , .desc2:hover ,.desc3:hover{
+     text-decoration:unset;
+ }
+.desc1:hover, .desc2:hover, .desc3:hover{
+    transform:scale(1.05,1.05)
+}
+.inside:hover {
+  
+    background-color: rgba(11, 12, 12, 0.9);
+    
+}
+@media (max-width: 700px) {
+    .type-portfolio {
+        width: 80%;
+        display: block;
+       
+    }
+    .desc1 {
+        display:block;
+        margin:20px auto;
+       height:250px;
+        width: 90%;  
+    }
+    .desc2 {
+        display:block;
+        margin: 20px auto;
+        height: 250px;
+        width: 90%;
+    }
+    .desc3 {
+        margin: 20px auto;
+        height: 250px;
+        width: 90%;
+    }
+}   

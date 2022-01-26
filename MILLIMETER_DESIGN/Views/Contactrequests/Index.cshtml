@@ -1,0 +1,107 @@
+﻿
+@model MILLIMETER_DESIGN.ViweModel.Contactrequests.ContactrequestsListViewModel;
+@{ Layout = "_LayoutAdmin";
+    ViewData["Title"] = "Index"; }
+<head>
+    <style>
+       
+
+
+        #myTable {
+            border-collapse: collapse;
+            width: 100%;
+            border: 1px solid #ddd;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+
+            </div>
+        </div>
+    </div>
+</div>
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title"><b>Contact Requests</b></h2>
+                    </div>
+                    <div class="card-body">
+                       
+                        <table id="myTable" class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>
+                                        Name
+                                    </th>
+                                    <th>
+                                        Email
+                                    </th>
+                                    <th>
+                                        Number
+                                    </th>
+                                    <th>
+                                        Subject
+                                    </th>
+                                    <th>
+                                        Action
+                                    </th>
+
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var elem in Model.Contactrequests)
+                                {
+
+                                <tr style="text-overflow:clip">
+                                    <td>@elem.Id</td>
+                                    <td>@elem.Name</td>
+                                    <td>@elem.Email</td>
+                                    <td>@elem.Number</td>
+                                    <td>@elem.Subject</td>
+                                    <td>
+                                        <a onclick="if (confirm('Are you sure you want to delte this Image?')) commentDelete(1); return false" asp-controller="Contactrequests" asp-action="Delete" asp-route-id="@elem.Id"><i class="fas fa-trash"></i></a>
+                                    </td>
+
+                                </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    function myFunction() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[1];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }</script>
+
+
+
+

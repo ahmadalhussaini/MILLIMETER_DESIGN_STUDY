@@ -1,0 +1,92 @@
+﻿
+body {
+    /* background-image: url('../imges/pexels-pixabay-220182.jpg');*/
+    background-color: rgb(244, 249, 254);
+    padding-top:66px
+}
+::selection {
+    color: #83b582;
+    background-color: black;
+}
+header {
+    background-color: rgb(232, 224, 213);
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:4  
+}
+.collapse{
+    margin-left:40% ;   
+}
+.collapse ul li a {
+    transition: all 0.5s linear;
+}
+    .collapse ul li a:hover {
+        transform: scale(1.075,1.075)
+    }
+.dropdown-menu {
+    background-color: rgb(52, 58, 64);
+}
+    .dropdown-menu a {
+        color: white;
+    }
+    .collapse ul li a {      
+        font-size: 17px;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+dropdown-menu a{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+.navbar-brand {
+    font-size: 25px;
+    letter-spacing:2px;
+    
+}
+    .coshil li {
+        margin-right: -4px;
+    }
+.coshil li a i {
+        color: #83b582;
+        font-size: 30px;
+    }
+.carousel-control{
+    height:50px;
+    width:30px;
+    background-color:black;
+    opacity:0.5;
+    color:wheat;
+    margin:auto 40px;
+    border-radius:10px
+}
+@media (max-width: 1300px) {
+    .collapse {
+        margin-left: 0;
+        
+    }
+}
+    @media (max-width: 700px) {
+
+        .collapse {
+            margin-left: 0;
+        }
+
+        .carousel-inner {
+            height: 300px;
+        }
+
+        .collapse ul li a {
+            transition: all 0.5s linear;
+            margin-left: 20px;
+        }
+
+
+            .collapse ul li a:hover {
+                transform: scale(1.05,1.05)
+            }
+
+        .navbar-brand {
+            font-size: 18px;
+            letter-spacing: 2px;
+        }
+    }

@@ -1,0 +1,105 @@
+﻿@model MILLIMETER_DESIGN.ViweModel.Project.ProjectViewModel
+
+@{
+    Layout = "_LayoutAdmin";
+    ViewData["Title"] = "Create";
+}
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-left">
+                    <li class="breadcrumb-item"><a asp-controller="Project" asp-action="Index">Projects</a></li>
+                    <li class="breadcrumb-item"><a asp-controller="Project" asp-action="Create">Add Project</a></li>
+                    <li class="breadcrumb-item active">@ViewData["navigation"]</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+<hr />
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header p-2">
+                        <h2 class="card-title"><b>Add Project</b></h2>
+                    </div>
+                    <div class="card-body =">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <form asp-action="Create"  enctype="multipart/form-data">
+                                    <div class="row d-flex justify-content-around align-items-center">
+                                    <div class="form-group col-lg-6">
+                                        <label asp-for="Name_En" class="control-label">Name-En</label>
+                                        <input required asp-for="Name_En" class="form-control" />
+                                        <span asp-validation-for="Name_En" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group col-lg-6">
+                                        <label asp-for="Name_Ar" class="control-label">Name-Ar</label>
+                                        <input required asp-for="Name_Ar" class="form-control" />
+                                        <span asp-validation-for="Name_Ar" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group col-lg-6">
+                                        <label asp-for="Description_En" class="control-label">Description_En</label>
+                                        <textarea required asp-for="Description_En" class="form-control" style="height:150px" ></textarea>
+                                        <span asp-validation-for="Description_En" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group col-lg-6">
+                                        <label asp-for="Description_Ar" class="control-label">Description_Ar</label>
+                                        <textarea required asp-for="Description_Ar" class="form-control" style="height:150px"></textarea>
+                                        <span asp-validation-for="Description_Ar" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group col-lg-6">
+                                        <label asp-for="Place_En" class="control-label">Place_En</label>
+                                        <input required asp-for="Place_En" class="form-control" />
+                                        <span asp-validation-for="Place_En" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group col-lg-6">
+                                        <label asp-for="Place_Ar" class="control-label">Place_Ar</label>
+                                        <input v asp-for="Place_Ar" class="form-control" />
+                                        <span asp-validation-for="Place_Ar" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group col-lg-6">
+                                        <label asp-for="Type" class="control-label">Type</label>
+                                        <select asp-for="Type" class="form-control">
+                                            <option>Commercial</option>
+                                            <option>Residential</option>
+                                            <option>Landscape</option>
+                                          
+
+                                        </select>
+                                        <span asp-validation-for="Type" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group col-lg-6">
+                                        <label asp-for="images" class="control-label"></label>
+                                        <input type="file"  multiple="multiple" required asp-for="_images" class="form-control" />
+                                        <span asp-validation-for="images" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group col-lg-6">
+                                        <label asp-for="CreatedAt" class="control-label">CreatedAt</label>                          
+                                        <input required type="date" asp-for="CreatedAt"  class="form-control"  />
+                                        <span asp-validation-for="CreatedAt" class="text-danger"></span>
+                                    </div>
+                                    </div>
+                                    <div class="form-group text-center ">
+                                        <input  type="submit" value="Create" class="btn btn-success" />
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+

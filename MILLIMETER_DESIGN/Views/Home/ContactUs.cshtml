@@ -1,0 +1,112 @@
+﻿@model MILLIMETER_DESIGN.ViweModel.Contactrequests.ContactrequestsViewModel;
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "ContacUs";
+}
+<link href="~/css/ContactUs.css" rel="stylesheet" />
+<head>
+
+</head>
+<body>
+    <div class="header">
+        <h2>CONTACT US</h2>
+        <hr />
+    </div>
+    <div class="social row d-flex">
+
+        <div class="col-lg-3 col-md-6 align-items-stretch">
+
+            <i class="fa fa-facebook-official" aria-hidden="true"></i>
+            <p>Facebook</p>
+            <a href="https://www.facebook.com/millimeterdesign1">
+                Millmeter studio design
+
+            </a>
+
+        </div>
+        <div class="col-lg-3 col-md-6 align-items-stretch">
+
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+            <p>Instagram</p>
+            <a href="https://www.instagram.com/millimeter.jo/">
+                Millmeter.Jo
+            </a>
+            <a href="https://www.instagram.com/millimeter.dubai/">
+                Millmeter.Dubai
+            </a>
+
+        </div>
+        <div class="col-lg-3 col-md-6  align-items-stretch">
+            <i class="fa fa-phone-square" aria-hidden="true"></i>
+            <p>Phone</p>
+            <a href="tel://00962897435501">
+                +962897435501
+            </a>
+            <a href="tel://00971567782664">
+                +971567782664
+            </a>
+            <a href="tel://0097145776835">
+                +97145776835
+            </a>
+            
+        </div>
+        <div class="col-lg-3 col-md-6 align-items-stretch">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <p>Email</p>
+            <a href="mailto:info@millimeter.design">
+                info@millimeter.design
+            </a>
+            <a href="mailto:ceo@millimeter.design">
+                ceo@millimeter.design
+            </a>
+
+        </div>
+    </div>
+
+    <div class="containe">
+        <h5>
+            If you got any questions
+            please do not hesitate to send us a message at the earlies
+        </h5>
+        <form asp-controller="ContactRequests" asp-action="Create" enctype="multipart/form-data">
+
+            <label asp-for="Name">Name</label>
+            <input type="text" id="fname" asp-for="Name" placeholder="Your name..">
+            <span asp-validation-for="Name" class="text-danger"></span>
+
+
+            <label asp-for="Email">Email</label>
+            <input type="text" id="fname" asp-for="Email" placeholder="Your Email..">
+            <span asp-validation-for="Email" class="text-danger"></span>
+
+
+            <label asp-for="Number">Number</label>
+            <input type="text" id="lname" asp-for="Number" placeholder="Your Number..">
+            <span asp-validation-for="Number" class="text-danger"></span>
+
+
+            <label asp-for="Subject">Subject</label>
+            <textarea id="subject" asp-for="Subject" placeholder="Write something.." style="height:200px"></textarea>
+            <span asp-validation-for="Subject" class="text-danger"></span>
+
+            <input type="submit" value="Submit">
+
+
+        </form>
+    </div>
+    <div class="location row d-flex">
+        <div class="location-jo col-lg-6 col-md-6 align-items-stretch ">
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3383.969538090423!2d35.87702928535678!3d31.988841231061038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151ca19115dad6a7%3A0x760eb0bcfd2524d!2sMillimeter%20design%20studio!5e0!3m2!1sar!2sjo!4v1628960460101!5m2!1sar!2sjo"
+                    allowfullscreen="" loading="lazy"></iframe>
+            <p><i class="fa fa-map-marker" aria-hidden="true"></i>Jordan-Amman</p>
+        </div>
+        <div class="location-uae col-lg-6 col-md-6 align-items-stretch">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.3551584965535!2d55.28740198551575!3d25.19124263812517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f69f3c63946bd%3A0x6bbe7fc94e7681ee!2sMillimeter%20Design%20Studio!5e0!3m2!1sar!2sjo!4v1628960759068!5m2!1sar!2sjo"
+                    allowfullscreen="" loading="lazy"></iframe>
+            <p><i class="fa fa-map-marker" aria-hidden="true"></i>Dubai-Business Bay</p>
+
+        </div>
+
+    </div>
+</body>

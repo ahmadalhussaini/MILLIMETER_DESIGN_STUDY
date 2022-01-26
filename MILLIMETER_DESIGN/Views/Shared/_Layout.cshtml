@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Millimeter Design</title>
+    <link rel="icon" href="~/imges/73669ef0-cd2c-4175-90b6-cbfcc53a9e2d.jpg">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="http://fortawesome.github.io/Font-Awesome/3.2.1/assets/font-awesome/css/font-awesome.css">
+    <link href="~/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="~/css/Layout.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
+            <img src="~/imges/ابيض.png" height="50" width="50" />
+
+            <a class="navbar-brand" asp-controller="Home" asp-action="Home">Millimeter<p style="display:inline; color: #83b582;margin-left:2px;">Design</p> </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" asp-controller="Home" asp-action="Home">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Projects
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" asp-controller="Home" asp-action="Projects" asp-route-type="Commercial">Commercial</a>
+                            <a class="dropdown-item" asp-controller="Home" asp-action="Projects" asp-route-type="Residential">Residential</a>
+                            <a class="dropdown-item" asp-controller="Home" asp-action="Projects" asp-route-type="Landscape">Landscape</a>
+
+                        </div>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" asp-controller="Home" asp-action="AboutUs"> About Us  <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link d-none" asp-controller="Home" asp-action="Protfolio"> portfolio <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" asp-controller="Home" asp-action="Teams">Team <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" asp-controller="Home" asp-action="ContactUs">Contact Us <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+    </header>
+    <div>
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <footer style="padding-bottom:0;margin-bottom:0" class="ftco-footer ftco-bg-dark ftco-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">About Millimeter</h2>
+                        <p> Millimeter design studio Interior Design | Architectural Solutions | Branding | Furniture Design | Lighting Design | Contracting | Lighting Design | Contracting </p>
+                        <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5 coshil">
+                            <li>
+                                <a href="https://www.facebook.com/millimeterdesign1" style=" background-color: rgb(34, 40, 49)">
+                                    <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/millimeter.dubai/" style=" background-color: rgb(34, 40, 49)">
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                            <li>
+                                <a href="https://www.instagram.com/millimeter.jo/" style=" background-color: rgb(34, 40, 49)">
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md">
+
+                    <div class="ftco-footer-widget mb-4 ml-md-5">
+                        <h2 class="ftco-heading-2">Links</h2>
+                        <ul class="list-unstyled">
+                            <li><a asp-controller="Home" asp-action="Home" class="py-1 d-block"><span><i class="fa fa-angle-right" aria-hidden="true" style="margin-right:10px"></i></span>Home</a></li>
+                            <li><a asp-controller="Home" asp-action="AboutUs" class="py-1 d-block"><span><i class="fa fa-angle-right" aria-hidden="true" style="margin-right:10px"></i></span>About Us</a></li>
+                            <li><a asp-controller="Home" asp-action="Team" class="py-1 d-block"><span><i class="fa fa-angle-right" aria-hidden="true" style="margin-right:10px"></i></span>Teams</a></li>
+                            <li><a asp-controller="Home" asp-action="ContactUs" class="py-1 d-block"><span><i class="fa fa-angle-right" aria-hidden="true" style="margin-right:10px"></i></span>Contact Us</a></li>
+
+
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">Business Hours</h2>
+                        <div class="opening-hours">
+                            <h4>Opening Days:</h4>
+                            <p class="pl-3">
+                                <span>Saturday – Thursday : 9am to 7 pm</span>
+
+                            </p>
+                            <h4>Vacations:</h4>
+                            <p class="pl-3">
+                                <span>All Friday Days</span>
+                                <span>All Official Holidays</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">Have a Questions?</h2>
+                        <div class="block-23 mb-3">
+                            <ul>
+                                <li><a href="tel://0797435501"><i class="fa fa-phone" aria-hidden="true" style="margin-right:10px"></i><span class="text">+962898435501</span></a></li>
+                                <li><a href="tel://00971567782664"><i class="fa fa-phone" aria-hidden="true" style="margin-right:10px"></i><span class="text">+971567782664</span></a></li>
+                                <li><a href="tel://0097145776835"><i class="fa fa-phone" aria-hidden="true" style="margin-right:10px"></i><span class="text">+97145776835</span></a></li>
+
+                                <li><a href="mailto:info@millimeter.design"><i class="fa fa-envelope" aria-hidden="true" style="margin-right:10px"></i><span class="text">info@millimeter.design</span></a></li>
+                                <li><a href="mailto:ceo@millimeter.design"><i class="fa fa-envelope" aria-hidden="true" style="margin-right:10px"></i><span class="text">ceo@millimeter.design</span></a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center" style="padding-top:0">
+
+                    <p>
+                        <a style=" color: #83b582;" href="https://www.facebook.com/profile.php?id=100011180761843" target="_blank">
+                            Copyright &copy; 2021
+                            <i class="icon-heart color-danger" aria-hidden="true"></i> by Ahmad Alhussaini
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    @RenderSection("Scripts", required: false)
+    <script>
+        $(function () {
+            $("#example1").DataTable({
+                "responsive": true,
+                "autoWidth": false,
+            });
+            $('#example2').DataTable({
+                "paging": true,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": true,
+                "info": true,
+                "autoWidth": false,
+                "responsive": true,
+            });
+            $('#example3').DataTable({
+                "paging": true,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": true,
+                "info": true,
+                "autoWidth": false,
+                "responsive": true,
+            });
+            $("#example4").DataTable({
+                "responsive": true,
+                "autoWidth": false,
+            });
+            $("#example5").DataTable({
+                "responsive": true,
+                "autoWidth": false,
+            });
+            $("#example6").DataTable({
+                "responsive": true,
+                "autoWidth": false,
+            });
+        });
+    </script>
+</body>
+</html>
