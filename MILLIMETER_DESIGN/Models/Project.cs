@@ -18,7 +18,6 @@ namespace MILLIMETER_DESIGN.Models
         public List<Image> Images { set; get; }
         public DateTime CreatedAt { get; set; }
 
-       
-
+      
     }
 }

@@ -55,8 +55,8 @@
 
 /* Style the submit button with a specific background color etc */
 input[type=submit] {
-    background-color: #83b582;
-    color:black;
+    background-color:none;
+    color: black;
     padding: 12px 20px;
     border: none;
     border-radius: 4px;

@@ -5,7 +5,7 @@ body {
     padding-top:66px
 }
 ::selection {
-    color: #83b582;
+    color: white;
     background-color: black;
 }
 header {
@@ -47,7 +47,7 @@ dropdown-menu a{
         margin-right: -4px;
     }
 .coshil li a i {
-        color: #83b582;
+        color: white;
         font-size: 30px;
     }
 .carousel-control{
